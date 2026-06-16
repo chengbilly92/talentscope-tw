@@ -1,0 +1,54 @@
+\begin{tikzpicture}[
+  font=\small,
+  node distance=0.7cm and 1.0cm,
+  box/.style={
+    rectangle, draw=black!60, rounded corners=3pt,
+    minimum width=2.7cm, minimum height=0.9cm,
+    align=center, inner sep=4pt,
+  },
+  source/.style={box, fill=blue!7},
+  store/.style={box,  fill=orange!10},
+  compute/.style={box,fill=green!10},
+  serve/.style={box,  fill=purple!8},
+  flow/.style={-Stealth, thick, draw=black!70},
+  futureflow/.style={-Stealth, thick, draw=black!50, dashed},
+  group/.style={rectangle, draw=black!25, dashed, rounded corners,
+                inner sep=8pt, font=\footnotesize, fill=none},
+]
+
+\node[source]                       (s1) {104.com.tw\\\scriptsize (AJAX list API)};
+\node[source, below=of s1]          (s2) {PTT BBS\\\scriptsize Tech\_Job / Soft\_Job / Salary};
+\node[source, below=of s2]          (s3) {CakeResume\\\scriptsize (Phase~2)};
+
+\node[compute, right=2.3cm of s2]   (ing) {Ingestion\\\scriptsize requests + tenacity};
+
+\node[store, right=of ing]          (lake) {Raw lake\\\scriptsize Parquet, date-partitioned};
+
+\node[compute, right=of lake]       (proc) {Processing\\\scriptsize salary / skill / dedup};
+
+\node[store, below=of proc, yshift=-0.3cm] (wh) {Curated warehouse\\\scriptsize DuckDB};
+
+\node[serve, right=of wh]           (api) {FastAPI\\\scriptsize REST};
+
+\node[serve, above=of api]          (web) {Web dashboard\\\scriptsize vanilla JS};
+
+\node[serve, below=of api]          (alert) {Alerts\\\scriptsize email / Slack (Phase~2)};
+
+\draw[flow] (s1) -- (ing);
+\draw[flow] (s2) -- (ing);
+\draw[flow] (s3) -- (ing);
+\draw[flow] (ing) -- (lake);
+\draw[flow] (lake) -- (proc);
+\draw[flow] (proc) -- (wh);
+\draw[flow] (wh) -- (api);
+\draw[flow] (api) -- (web);
+\draw[futureflow] (api) -- (alert);
+
+\begin{scope}[on background layer]
+  \node[group, fit=(s1)(s2)(s3), label={[font=\footnotesize\itshape]above:Sources}] {};
+  \node[group, fit=(ing)(lake)(proc), label={[font=\footnotesize\itshape]above:Pipeline}] {};
+  \node[group, fit=(api)(web)(alert)(wh),
+        label={[font=\footnotesize\itshape]above:Storage \& Delivery}] {};
+\end{scope}
+
+\end{tikzpicture}

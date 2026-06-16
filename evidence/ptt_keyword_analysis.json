@@ -1,0 +1,16 @@
+{
+  "total_posts_scanned": 164,
+  "boards": [
+    "Tech_Job",
+    "Soft_Job",
+    "Salary"
+  ],
+  "posts_mentioning": {
+    "薪資 / salary / package / 月薪 / 年薪": 82,
+    "offer / 換工作 / 離職 / 跳槽 / 面試": 77,
+    "新鮮人 / fresh / 應屆 / junior": 48,
+    "FAANG / 外商 / Google / Amazon / 微軟": 35,
+    "談薪 / negotiate / counter offer / 加薪": 9
+  },
+  "note": "Counts are unique-post hits (a post counts at most once per cluster) over real bodies+titles in data/raw/ptt/."
+}

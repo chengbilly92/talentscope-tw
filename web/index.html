@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TalentScope TW — Salary intel for Taiwan tech</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>TalentScope <span class="tw">TW</span></h1>
+    <p class="tagline">Know what you're worth — before you sign that offer.</p>
+    <div id="health-strip" class="health-strip">Loading market data…</div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Salary benchmark</h2>
+      <p class="hint">Pulls live percentiles from indexed job postings in our warehouse.</p>
+      <form id="benchmark-form" class="grid">
+        <label>Role
+          <select name="role" id="role-select" required></select>
+        </label>
+        <label>Years of experience
+          <input type="number" name="yoe" min="0" max="25" placeholder="e.g. 4" />
+        </label>
+        <label>City
+          <select name="city">
+            <option value="">Any</option>
+            <option>Taipei</option>
+            <option>New Taipei</option>
+            <option>Taoyuan</option>
+            <option>Hsinchu</option>
+            <option>Taichung</option>
+            <option>Tainan</option>
+            <option>Kaohsiung</option>
+          </select>
+        </label>
+        <label>Skill (optional)
+          <input type="text" name="skill" placeholder="e.g. kafka, pytorch" />
+        </label>
+        <button type="submit">Show benchmark</button>
+      </form>
+      <div id="benchmark-result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Am I underpaid?</h2>
+      <p class="hint">Compare your current monthly pay to the market median for your role.</p>
+      <form id="underpaid-form" class="grid">
+        <label>Role
+          <select name="role" id="underpaid-role" required></select>
+        </label>
+        <label>Years of experience
+          <input type="number" name="yoe" min="0" max="25" />
+        </label>
+        <label>Current monthly pay (TWD)
+          <input type="number" name="current_monthly_twd" min="20000" required placeholder="65000" />
+        </label>
+        <button type="submit">Check</button>
+      </form>
+      <div id="underpaid-result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Trending skills</h2>
+      <p class="hint">Most-mentioned skills across indexed postings, with median pay attached.</p>
+      <div id="skills-result" class="result"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>TalentScope TW · NTU Big Data Systems final project · 2026</p>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>

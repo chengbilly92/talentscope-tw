@@ -1,0 +1,55 @@
+{
+  "as_of": "2026-06",
+  "anchors": [
+    {
+      "product": "Levels.fyi premium (offer review)",
+      "category": "career-intel",
+      "headline_price_twd": "6,400 one-off",
+      "annualised_twd": 6400,
+      "note": "Identical job to be done (offer negotiation help) but US-centric."
+    },
+    {
+      "product": "LinkedIn Premium Career",
+      "category": "career-intel",
+      "headline_price_twd": "759 / month",
+      "annualised_twd": 9108,
+      "note": "Salary-insights are a tab inside the product; not TW-specific."
+    },
+    {
+      "product": "天下雜誌數位版 (CommonWealth digital)",
+      "category": "business-intel",
+      "headline_price_twd": "2,400 / year",
+      "annualised_twd": 2400,
+      "note": "TW knowledge worker baseline subscription for career-adjacent content."
+    },
+    {
+      "product": "商業周刊+ (Business Weekly+)",
+      "category": "business-intel",
+      "headline_price_twd": "1,500 / year",
+      "annualised_twd": 1500,
+      "note": "Same baseline."
+    },
+    {
+      "product": "Hahow professional course (single)",
+      "category": "career-investment",
+      "headline_price_twd": "2,000-8,000 one-off",
+      "annualised_twd": 5000,
+      "note": "Discretionary career investment a TW SWE makes 1-2 times a year."
+    },
+    {
+      "product": "ALPHA Camp bootcamp tier",
+      "category": "career-investment",
+      "headline_price_twd": "60,000-180,000 one-off",
+      "annualised_twd": 120000,
+      "note": "Career change investment; included only as an upper bound on demonstrated willingness to spend on career outcomes."
+    }
+  ],
+  "interpretation": {
+    "career_intel_anchor_twd": 6400,
+    "baseline_subscription_anchor_twd": 1950,
+    "talentscope_target_annual_twd": 2388,
+    "talentscope_vs_career_intel_anchor": 0.37,
+    "talentscope_vs_baseline_anchor": 1.22,
+    "comment": "TalentScope at NT$199/mo (NT$2,388/yr) lands at ~37% of the closest career-intel anchor (Levels.fyi) and ~1.2x of the baseline TW business-media anchor. That is the defensible WTP corridor for an engineer who already pays for one of these."
+  }
+}

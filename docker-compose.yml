@@ -1,0 +1,10 @@
+services:
+  talentscope:
+    build: .
+    image: talentscope-tw:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONPATH=/app

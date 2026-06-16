@@ -1,0 +1,12 @@
+{
+  "median_monthly_twd_from_ptt": 78500,
+  "ptt_pay_sample_n": 22,
+  "assumed_negotiation_gap_pct": 0.07,
+  "assumed_recovery_pct_with_data": 0.3,
+  "expected_value_to_user_yr_twd": 19782,
+  "implied_wtp_ceiling_yr_twd": 3956,
+  "implied_wtp_ceiling_monthly_twd": 329,
+  "talentscope_price_monthly_twd": 199,
+  "headroom_ratio": 1.7,
+  "comment": "If our model holds, our headline NT$199/mo price uses well under half of the rational WTP ceiling --- room to price-up later, and a safety margin if any one assumption is off by 2x."
+}

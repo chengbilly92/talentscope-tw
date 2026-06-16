@@ -1,0 +1,19 @@
+{
+  "posts_scanned": 164,
+  "posts_with_at_least_one_pay_mention": 17,
+  "total_mentions": 22,
+  "monthly_twd_quantiles": {
+    "p10": 32066,
+    "p25": 53000,
+    "p50": 78500,
+    "p75": 145000,
+    "p90": 245000
+  },
+  "spread_p10_to_p90_ratio": 7.64,
+  "by_board": {
+    "Soft_Job": 12,
+    "Tech_Job": 9,
+    "Salary": 1
+  },
+  "note": "Body-text regex extraction; precision is lossy by design (false-negatives > false-positives). Used for distributional claims, not for individual salary attribution."
+}

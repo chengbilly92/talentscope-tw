@@ -1,0 +1,37 @@
+{
+  "as_of": "2026-06",
+  "competitors": [
+    {
+      "name": "Levels.fyi",
+      "url": "https://www.levels.fyi/",
+      "monthly_twd": null,
+      "one_off_twd": 6400,
+      "tw_coverage": "low",
+      "notes": "Premium offer-negotiation coaching is US$199-499 one-off; data is heavy on US/EU, thin on Taiwan domestic companies."
+    },
+    {
+      "name": "Glassdoor",
+      "url": "https://www.glassdoor.com/",
+      "monthly_twd": 0,
+      "one_off_twd": 0,
+      "tw_coverage": "medium-low",
+      "notes": "Free but ad-supported and self-reported; TW sample sizes per company are typically <10 and several years stale."
+    },
+    {
+      "name": "104 Salary Bank (104 薪資情報)",
+      "url": "https://www.104.com.tw/jb/wage/",
+      "monthly_twd": 0,
+      "one_off_twd": 0,
+      "tw_coverage": "high",
+      "notes": "Free, broad, but aggregates at role level and reports median only; no skill, company, or yoe breakdowns."
+    },
+    {
+      "name": "Salary.tw (community)",
+      "url": "https://salary.tw/",
+      "monthly_twd": 0,
+      "one_off_twd": 0,
+      "tw_coverage": "medium",
+      "notes": "Volunteer-run community submissions; reliability varies."
+    }
+  ]
+}
